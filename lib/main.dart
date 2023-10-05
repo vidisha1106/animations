@@ -1,6 +1,8 @@
 import 'package:animations/animated_align_sample.dart';
 import 'package:animations/animated_container_example.dart';
 import 'package:animations/animated_positioned_example.dart';
+import 'package:animations/card_ui/card_ui.dart';
+import 'package:animations/location_ui/location_ui.dart';
 import 'package:animations/physics_based_animation.dart';
 import 'package:animations/tween_animation.dart';
 import 'package:flutter/material.dart';
@@ -118,6 +120,36 @@ class _MyHomePageState extends State<MyHomePage>
                 },
                 child: Text(
                   "Animated Positioned Example",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                )),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return CardUI();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  "Card UI",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                )),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LocationUI();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  "Location UI",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 )),
           ],
